@@ -1,1 +1,44 @@
-<p>house-parent works!</p>
+<div class="modal-container">
+  <div class="home-modal-content">
+    <div class="modal-body">
+      <div
+        class="modal-trans-header"
+        [ngStyle]="{
+          'justify-content': currentStep === 1 ? 'end' : 'space-between'
+        }"
+      >
+        <div *ngIf="currentStep != 1">
+          <div class="back-btn" (click)="previousStep()">
+            <span style="font-weight: 400; font-size: 0.875rem"
+              ><img src="./icons/arrow-right.svg" placeholder="right arrow" />
+              العودة
+            </span>
+          </div>
+        </div>
+        <button type="button" class="btn close-btn">
+          <span>&times;</span>
+        </button>
+      </div>
+      <div>
+        <app-pre-step
+          *ngIf="currentStep === 1"
+          [handleProceed]="handleProceed"
+        ></app-pre-step>
+        <app-selection
+          *ngIf="currentStep === 2"
+          [handleProceed]="handleProceed"
+        ></app-selection>
+        <app-prob
+          *ngIf="currentStep === 3"
+          [handleProceed]="handleProceed"
+        ></app-prob>
+        <app-submission *ngIf="currentStep === 4"></app-submission>
+      </div>
+      <div class="modal-footer">
+        <div class="progress-bar-container">
+          <div class="progress-bar" [style.width]="progressWidth"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
