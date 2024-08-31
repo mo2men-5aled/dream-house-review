@@ -1,1 +1,208 @@
-<p>selection works!</p>
+<div class="step-two-body">
+  <!-- stage one of step two-->
+  <div [hidden]="currentStage !== 1">
+    <div class="header-content">
+      <div style="width: 20rem">
+        <div class="d-flex">
+          <img
+            src="./icons/star-icon.svg"
+            alt="star icon"
+            width="14"
+            height="14"
+          />
+        </div>
+        <h2 class="modal-title">اختر المكان المفضل لسكنك</h2>
+        <p class="modal-subtitle">قم باختيار مصدر شققك السكانية...</p>
+        <div class="d-flex justify-content-end">
+          <img
+            src="./icons/star-icon.svg"
+            alt="star icon"
+            width="20"
+            height="20"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="cards-options">
+      <div
+        class="card-container {{
+          selectedPlaceType === 'cairo' ? 'selected-card' : ''
+        }}"
+        (click)="handlePlaceTypeSelection('cairo')"
+      >
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          [checked]="selectedPlaceType === 'cairo'"
+        />
+        <div class="option-card">
+          <img class="mb-2" src="./icons/home-icon.svg" alt="option 1" />
+          <p>القاهرة</p>
+        </div>
+      </div>
+      <div
+        class="card-container {{
+          selectedPlaceType === 'north-coast' ? 'selected-card' : ''
+        }}"
+        (click)="handlePlaceTypeSelection('north-coast')"
+      >
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          [checked]="selectedPlaceType === 'north-coast'"
+        />
+        <div class="option-card">
+          <img class="mb-2" src="./icons/truck-icon.svg" alt="option 2" />
+          <p>الساحل الشمالي</p>
+        </div>
+      </div>
+
+      <div
+        class="card-container {{
+          selectedPlaceType === 'dahab' ? 'selected-card' : ''
+        }}"
+        (click)="handlePlaceTypeSelection('dahab')"
+      >
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          [checked]="selectedPlaceType === 'dahab'"
+        />
+        <div class="option-card">
+          <img class="mb-2" src="./icons/people-icon.svg" alt="option 3" />
+          <p>دهب</p>
+        </div>
+      </div>
+    </div>
+    <div class="modal-bottom-content">
+      <button
+        class="btn btn-primary start-button"
+        [disabled]="!selectedPlaceType"
+        (click)="nextStageOfStepTwo()"
+      >
+        <img
+          class="p-1"
+          src="./icons/circle-chevron-right.svg"
+          alt="Start Icon"
+        />
+        ابدأ الآن
+      </button>
+      <div style="font-weight: 400; font-size: 0.6rem; color: #a5a7ab">
+        <div class="mt-4 mb-2">
+          نحن هنا لمساعدتك في أختيار منزلك بسهولة وعناية
+        </div>
+        <div class="mb-4">
+          قم بالضغط على زر "بدء" للبدء في العملية، واتبع التوجيهات لإدخال
+          معلومات الحملة
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- stage two of step two -->
+  <div [hidden]="currentStage !== 2">
+    <div class="header-content">
+      <div style="width: 23rem">
+        <div class="d-flex">
+          <img
+            src="./icons/star-icon.svg"
+            alt="star icon"
+            width="14"
+            height="14"
+          />
+        </div>
+        <h2 class="modal-title">اختر نوع المنزل</h2>
+        <p class="modal-subtitle">
+          قم بأختيار مصدر شقك الأسكانية كل تستكمل باقي الخطوات
+        </p>
+        <div class="d-flex justify-content-end">
+          <img
+            src="./icons/star-icon.svg"
+            alt="star icon"
+            width="20"
+            height="20"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="cards-options">
+      <div
+        class="card-container {{
+          selectedAppartmentType === 'villa' ? 'selected-card' : ''
+        }}"
+        (click)="handleAppartmentTypeSelection('villa')"
+      >
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          [checked]="selectedAppartmentType === 'villa'"
+        />
+        <div class="option-card">
+          <img class="mb-2" src="./icons/video-icon.svg" alt="option 1" />
+          <p>فيلا</p>
+        </div>
+      </div>
+      <div
+        class="card-container {{
+          selectedAppartmentType === 'doublex' ? 'selected-card' : ''
+        }}"
+        (click)="handleAppartmentTypeSelection('doublex')"
+      >
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          [checked]="selectedAppartmentType === 'doublex'"
+        />
+        <div class="option-card">
+          <img class="mb-2" src="./icons/blue-wheat-house.svg" alt="option 2" />
+          <p>شقة دوبليكس</p>
+        </div>
+      </div>
+
+      <div
+        class="card-container {{
+          selectedAppartmentType === 'living' ? 'selected-card' : ''
+        }}"
+        (click)="handleAppartmentTypeSelection('living')"
+      >
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          [checked]="selectedAppartmentType === 'living'"
+        />
+        <div class="option-card">
+          <img
+            class="mb-2"
+            src="./icons/green-wheat-house.svg"
+            alt="option 3"
+          />
+          <p>شقة سكنية</p>
+        </div>
+      </div>
+    </div>
+    <div class="modal-bottom-content">
+      <button
+        class="btn btn-primary start-button"
+        [disabled]="!selectedAppartmentType"
+        (click)="handleProceed()"
+      >
+        التالي
+      </button>
+      <div style="font-weight: 400; font-size: 0.6rem; color: #a5a7ab">
+        <div class="mt-4 mb-2">
+          نحن هنا لمساعدتك في أختيار منزلك بسهولة وعناية
+        </div>
+        <div class="mb-4">
+          قم بالضغط على زر "بدء" للبدء في العملية، واتبع التوجيهات لإدخال
+          معلومات الحملة
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

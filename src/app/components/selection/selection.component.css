@@ -1,0 +1,109 @@
+.step-two-body {
+  background: radial-gradient(
+      circle at top left,
+      rgba(255, 247, 204, 0.2),
+      transparent
+    ),
+    radial-gradient(circle at top right, rgba(204, 231, 255, 0.2), transparent),
+    radial-gradient(
+      circle at bottom left,
+      rgba(204, 231, 255, 0.2),
+      transparent
+    ),
+    radial-gradient(circle at bottom right, rgba(255, 247, 2040.2), transparent);
+  border-radius: 0.6rem;
+}
+/* Header Content */
+.header-content {
+  text-align: center;
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.cards-options {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 7rem 0rem;
+}
+
+.modal-title {
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.modal-subtitle {
+  color: #a5a7ab;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.card-container {
+  transition: background-color 0.3s;
+  border-radius: 0.6rem;
+  padding: 0.5rem;
+  width: 10.375rem;
+  height: 8.5rem;
+  cursor: pointer;
+  border: 1px solid #ececec;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.card-container:hover {
+  background-color: rgba(78, 160, 253, 0.085);
+}
+/* Option Cards */
+.option-card {
+  display: flex;
+  height: 8.5rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.selected-card {
+  border-color: #4f9ffd;
+}
+
+.form-check-input {
+  border-radius: 100%;
+}
+.form-check-input:not(:checked) {
+  background-color: #f1f1f1;
+  border: none;
+}
+
+.start-button {
+  background-color: #3e97ff;
+  border: none;
+  padding: 0.5rem 4rem;
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-button:hover {
+  background-color: #0077ff;
+}
+
+.start-button:disabled {
+  background-color: #b0bbd5;
+  border: none;
+}
+.modal-bottom-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  align-items: center;
+  text-align: center;
+}
