@@ -1,0 +1,129 @@
+.step-three {
+  margin: 5rem 2rem 0 2rem;
+}
+
+.header-container {
+  margin-bottom: 2rem;
+}
+
+.modal-title {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.modal-subtitle {
+  color: #a5a7ab;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.form-label {
+  color: #a5a7ab;
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+.form-group {
+  position: relative;
+  z-index: 1000;
+}
+
+.rich-textbox-bar {
+  background-color: #f2f4f7;
+  border-radius: 0.6rem 0.6rem 0 0;
+  padding-right: 1rem;
+}
+textarea {
+  border-radius: 0 0 0.6rem 0.6rem;
+}
+
+.modal-bottom-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 1rem 0;
+  align-items: center;
+  text-align: center;
+}
+
+.start-button {
+  background-color: #3e97ff;
+  border: none;
+  padding: 0.5rem 4rem;
+  border-radius: 0.6rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.start-button:hover {
+  background-color: #0077ff;
+}
+
+.stage-one-blue-envelop {
+  position: absolute;
+  left: 10%;
+  top: 13%;
+  width: 100%;
+  z-index: 88;
+  display: flex;
+  justify-content: end;
+}
+.stage-two-blue-envelop {
+  position: absolute;
+  left: 10%;
+  top: 7%;
+  width: 100%;
+  z-index: 88;
+  display: flex;
+  justify-content: end;
+}
+
+.card {
+  position: relative;
+  background-color: #fcfcfc;
+  border: 0.75px solid #d3d6dc;
+  border-radius: 0.6rem;
+  z-index: 888;
+}
+
+.card-content {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  text-align: start;
+  padding: 1rem;
+}
+
+.form-check-input {
+  margin-left: 0.5rem;
+}
+
+.form-check-label {
+  font-size: 0.875rem;
+  font-weight: 400;
+  margin-left: 0.5rem;
+}
+
+.option {
+  margin-left: 2rem;
+  font-weight: 400;
+  font-size: 0.875rem;
+  color: #1c1c28;
+}
+
+.description {
+  border-radius: 0.6rem 0.6rem 0 0;
+}
+
+.description-content {
+  background-color: #ffffff;
+  height: 15rem;
+  overflow-y: auto; /* Enables vertical scrolling */
+  overflow-x: hidden; /* Hides horizontal overflow */
+  border-radius: 0 0 0.6rem 0.6rem;
+  padding: 1rem; /* Optional padding for better content spacing */
+}

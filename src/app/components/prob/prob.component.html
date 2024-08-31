@@ -1,1 +1,301 @@
-<p>prob works!</p>
+<div class="step-three">
+  <!-- stage 1 of step 3 -->
+  <div class="step-three__stage-one" *ngIf="currentStage === 1">
+    <div class="header-container">
+      <h2 class="modal-title">
+        <img
+          src="./icons/gold-star-icon.svg"
+          alt="star icon"
+          width="14"
+          height="14"
+          style="margin-top: -2rem"
+        />
+        قم بكتابة وصف منزل أحلامك
+        <img
+          src="./icons/gold-star-icon.svg"
+          alt="star icon"
+          width="20"
+          height="20"
+          style="margin-bottom: -2rem"
+        />
+      </h2>
+    </div>
+    <div class="d-flex justify-content-end stage-one-blue-envelop">
+      <img
+        src="./icons/blue-envelop-icon.svg"
+        alt="envelop icon"
+        height="200"
+        width="200"
+      />
+    </div>
+    <div class="row">
+      <div class="col-md-7">
+        <label for="house-description" class="form-label"
+          >وصف مختصر عن المنزل</label
+        >
+        <input
+          type="text"
+          class="form-control"
+          placeholder="اكتب هنا وصف المنزل"
+        />
+      </div>
+    </div>
+
+    <div class="form-group mt-3">
+      <label for="house-description" class="form-label"
+        >وصف تعبيري عن المنزل</label
+      >
+
+      <div class="rich-textbox-bar">
+        <img
+          src="./icons/rich-textbox-icons/link-icon.svg"
+          alt="emoji icon"
+          width="25"
+          height="25"
+          style="margin-left: 1rem"
+        />
+        <img
+          src="./icons/rich-textbox-icons/image-icon.svg"
+          alt="emoji icon"
+          width="15"
+          height="15"
+          style="margin-left: 1.2rem"
+        />
+        <img
+          src="./icons/rich-textbox-icons/rows-icon.svg"
+          alt="emoji icon"
+          width="15"
+          height="15"
+          style="margin-left: 1.2rem"
+        />
+        <img
+          src="./icons/rich-textbox-icons/number-icon.svg"
+          alt="emoji icon"
+          width="15"
+          height="15"
+          style="margin-left: 1.2rem"
+        />
+        <img
+          src="./icons/rich-textbox-icons/right-align-icon.svg"
+          alt="emoji icon"
+          width="15"
+          height="15"
+          style="margin-left: 1.2rem"
+        />
+        <img
+          src="./icons/rich-textbox-icons/center-align-icon.svg"
+          alt="emoji icon"
+          width="15"
+          height="15"
+          style="margin-left: 1.2rem"
+        />
+        <img
+          src="./icons/rich-textbox-icons/left-align-icon.svg"
+          alt="emoji icon"
+          width="15"
+          height="15"
+          style="margin-left: 1.2rem"
+        />
+        <img
+          src="./icons/rich-textbox-icons/strike-icon.svg"
+          alt="emoji icon"
+          width="15"
+          height="15"
+          style="margin-left: 1.2rem"
+        />
+        <img
+          src="./icons/rich-textbox-icons/underline-icon.svg"
+          alt="emoji icon"
+          width="15"
+          height="15"
+          style="margin-left: 1.2rem"
+        />
+        <img
+          src="./icons/rich-textbox-icons/italic-icon.svg"
+          alt="emoji icon"
+          width="15"
+          height="15"
+          style="margin-left: 1.2rem"
+        />
+        <img
+          src="./icons/rich-textbox-icons/bold-icon.svg"
+          alt="emoji icon"
+          width="15"
+          height="15"
+          style="margin-left: 1.2rem"
+        />
+        <img
+          src="./icons/rich-textbox-icons/color-icon.svg"
+          alt="emoji icon"
+          width="15"
+          height="15"
+          style="margin-left: 1.2rem"
+        />
+        <img
+          src="./icons/rich-textbox-icons/text-icon.svg"
+          alt="emoji icon"
+          width="15"
+          height="15"
+          style="margin-left: 1.2rem"
+        />
+        <img
+          src="./icons/rich-textbox-icons/font-size-icon.svg"
+          alt="emoji icon"
+          width="40"
+          height="40"
+          style="margin-left: 1.2rem"
+        />
+      </div>
+      <textarea
+        id="house-description"
+        class="form-control"
+        placeholder="اكتب هنا وصف المنزل"
+        rows="12"
+      ></textarea>
+    </div>
+    <div class="modal-bottom-content">
+      <button
+        class="btn btn-primary start-button"
+        (click)="nextStageOfStepThree()"
+      >
+        الخطوة التالية
+      </button>
+      <div style="font-weight: 400; font-size: 0.6rem; color: #a5a7ab">
+        <div class="mt-3">
+          قم بالضغط على زر "بدء" للبدء في العملية، لإدخال معلومات المنزل
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- stage 2 of step 3 -->
+  <div class="step-three__stage-two" *ngIf="currentStage === 2">
+    <div class="header-container">
+      <h2 class="modal-title">قم بكتابة نص الرسالة المرسلة</h2>
+      <span class="modal-subtitle"
+        >قم بتسمية حملتك و تاريخ إرسال الحملة المتوقع</span
+      >
+    </div>
+    <div class="stage-two-blue-envelop">
+      <img
+        src="./icons/blue-envelop-icon.svg"
+        alt="envelop icon"
+        height="200"
+        width="200"
+      />
+    </div>
+    <div class="card">
+      <div class="card-content">
+        <div class="mb-3">
+          <img
+            src="./icons/calendar-tick.svg"
+            alt="calender icon"
+            height="16"
+            width="16"
+          />
+          <span style="font-size: 1rem; font-weight: 400; color: #615e83">
+            تصميم المنزل
+          </span>
+        </div>
+        <div class="radio-inputs">
+          <span class="option">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              تصميم حديث
+            </label>
+          </span>
+          <span class="option">
+            <input
+              class="form-check-input"
+              type="radio"
+              name="flexRadioDefault"
+              id="flexRadioDefault1"
+            />
+            <label class="form-check-label" for="flexRadioDefault1">
+              تصميم حديث وذكي
+            </label>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="description card mt-3">
+      <div class="card-content">
+        <div class="mb-3">
+          <img
+            src="./icons/eye.svg"
+            alt="calender icon"
+            height="16"
+            width="16"
+          />
+          <span style="font-size: 1rem; font-weight: 400; color: #615e83">
+            تصميم المنزل
+          </span>
+        </div>
+        <div class="radio-inputs">
+          <span class="option">
+            <span style="color: #8a8ea1"> الموضوع : </span>
+            <span
+              class="form-check-label"
+              style="color: #1c1c28"
+              for="flexRadioDefault1"
+            >
+              فيلا قريبة من التجمع الخامس
+            </span>
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="description-content card">
+      <span>
+        <div>عزيزي [اسم العميل]،</div>
+
+        <div>
+          نحن في [اسم الشركة] نسعى دائمًا لتقديم أفضل الحلول التي تلبي احتياجاتك
+          وتجعل حياتك أسهل. لذلك، يسعدنا أن نعلن عن إطلاق ميزات جديدة ومثيرة في
+          منصتنا
+        </div>
+        <div>ما الجديد؟</div>
+        <ul>
+          <li>ميزة X: التي تتيح لك [وصف مختصر للميزة وفائدتها].</li>
+          <li>ميزة Y: لتمكينك من [وصف مختصر للميزة وفائدتها].</li>
+          <li>ميزة Z: التي تساعدك على [وصف مختصر للميزة وفائدتها].</li>
+        </ul>
+        <div>لماذا تختار [اسم الشركة]؟</div>
+        <ul>
+          <li>خدمة عملاء متميزة: نحن هنا لدعمك على مدار الساعة.</li>
+          <li>أسعار تنافسية: احصل على أفضل قيمة مقابل ما تدفعه.</li>
+          <li>أمان وثقة: نحن نحافظ على سرية معلوماتك وأمانها.</li>
+        </ul>
+        <div>
+          عرض خاص! احصل على خصم بنسبة [نسبة الخصم]% عند استخدام الكود
+          NEWFEATURES أثناء عملية الشراء. العرض ساري حتى [تاريخ انتهاء العرض].
+          لا تفوت الفرصة! انقر هنا للاكتشاف الآن: [رابط الموقع]
+        </div>
+        <div>
+          إذا كان لديك أي استفسارات أو تحتاج إلى مساعدة، لا تتردد في الاتصال بنا
+          على [بيانات الاتصال].
+        </div>
+        >
+        <div>
+          شكرًا لاختيارك [اسم الشركة]. نحن نتطلع إلى خدمتك وتقديم أفضل تجربة
+          ممكنة لك.
+        </div>
+        <div>مع أطيب التحيات، فريق [اسم الشركة]</div>
+      </span>
+    </div>
+    <div class="modal-bottom-content">
+      <button class="btn btn-primary start-button" (click)="handleProceed()">
+        الخطوة التالية
+      </button>
+      <div style="font-weight: 400; font-size: 0.6rem; color: #a5a7ab">
+        <div class="mt-3">
+          قم بالضغط على زر "بدء" للبدء في العملية، لإدخال معلومات المنزل
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
