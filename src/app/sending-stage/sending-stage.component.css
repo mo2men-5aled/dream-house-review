@@ -1,0 +1,82 @@
+.sending-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.header-content {
+  text-align: center;
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-title {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.modal-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #83889f;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5rem 0 3rem 0;
+}
+
+.rounded-circle {
+  border: 8px solid rgb(62, 151, 255, 0.3);
+  border-radius: 100%;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 14.25rem;
+  height: 14.25rem;
+}
+
+.sending-img {
+  width: 20rem;
+  height: 17rem;
+}
+
+.progress-container {
+  background-color: rgba(62, 151, 255, 0.3);
+  border-radius: 25px;
+  overflow: hidden;
+  height: 0.68rem;
+  margin: 0.5rem 0;
+  width: 100%;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: #3e97ff;
+  width: 0%;
+  transition: width 0.1s ease-in-out;
+}
+
+.loading-section-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 2rem 0;
+}
+.loading-section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: stretch;
+  width: 40rem;
+  margin: 2rem 1rem 3rem 1rem;
+}

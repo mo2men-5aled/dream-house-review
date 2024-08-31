@@ -1,0 +1,29 @@
+<div>
+  <div class="header-content">
+    <h2 class="modal-title">جاري إرسال رسالتك الأسكانية</h2>
+    <p class="modal-subtitle">الرجاء الأنتظار بعض الدقائق فقط</p>
+  </div>
+
+  <div class="img-container">
+    <div class="rounded-circle">
+      <img
+        src="./vids/sending.gif"
+        alt="loading"
+        class="loading-gif"
+        class="sending-img"
+      />
+    </div>
+  </div>
+
+  <div class="loading-section-container">
+    <div class="loading-section">
+      <div class="d-flex justify-content-between">
+        <span>جاري الارسال</span>
+        <span>{{ progress }} %</span>
+      </div>
+      <div class="progress-container">
+        <div class="progress-bar" [style.width.%]="progress"></div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,1 +1,11 @@
-<p>submission works!</p>
+<div>
+  <!-- sending screen -->
+  <div *ngIf="loading">
+    <app-sending-stage [progress]="progress"></app-sending-stage>
+  </div>
+
+  <!-- success screen -->
+  <div *ngIf="!loading">
+    <app-success-stage></app-success-stage>
+  </div>
+</div>

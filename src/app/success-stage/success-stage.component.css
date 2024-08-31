@@ -1,0 +1,50 @@
+.success-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.header-content {
+  text-align: center;
+  padding-top: 6rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-title {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.modal-subtitle {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #83889f;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2.5rem 0 3rem 0;
+}
+
+.success-img {
+  width: 20rem;
+  height: 20rem;
+}
+
+.btn {
+  color: #3e97ff;
+  border: none;
+  border-radius: 25px;
+  padding-bottom: 3rem;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
