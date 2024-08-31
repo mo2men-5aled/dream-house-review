@@ -1,1 +1,132 @@
-<p>pre-step works!</p>
+<div class="row gx-0">
+  <!-- Right Side (Information) -->
+  <div class="col-md-6 col-lg-5 right-section">
+    <div class="d-flex mb-4 flex-column mt-4">
+      <div class="section-announcements mb-4">
+        <img src="./icons/megaphone.svg" alt="Megaphone" />
+
+        <span class="announcements-text"> تهيئة الحملات الإعلانية </span>
+      </div>
+      <span class="right-section-header">
+        مرحباً بك في منصة اختيار عقارات سكنية للتعمير
+      </span>
+    </div>
+    <p>قم بإضافة عملائك الحاليين إلى نظامك الجديد لبدء التجربة.</p>
+    <ul class="list-unstyled">
+      <li class="mb-2">
+        <img src="./icons/right-checked-icon.svg" alt="blue-checked" />
+
+        <span> قم بتحميل شعاراتك وتفاصيل علامتك التجارية </span>
+      </li>
+      <li class="mb-2">
+        <img src="./icons/right-checked-icon.svg" alt="blue-checked" />
+
+        <span> اختر وتخص ما تحتاجها </span>
+      </li>
+      <li class="mb-2">
+        <img src="./icons/right-checked-icon.svg" alt="blue-checked" />
+
+        <span> اختر موضوعاً وصمم مظهر استمارتك </span>
+      </li>
+      <li class="mb-2">
+        <img src="./icons/right-checked-icon.svg" alt="blue-checked" />
+
+        <span> ضبط رسالة شكر وإجراءات المتابعة </span>
+      </li>
+    </ul>
+  </div>
+  <!-- Left Side (Steps) -->
+  <div class="col-md-6 col-lg-7 left-section">
+    <div class="left-section-header">
+      <h5 class="right-section-header">طريقة بناء الحملة الخاصة بك</h5>
+      <span class="left-section-sub-header"
+        >الطريقة المختارة لطريقة إنشاء رسالة الحملة</span
+      >
+
+      <!-- Step Option 1 -->
+      <div
+        class="card mb-3 selection-card mt-3 {{
+          selectedType === 'manual' ? 'selected-card' : ''
+        }}"
+        (click)="handleTypeSelection('manual')"
+      >
+        <div class="card-body">
+          <div
+            class="d-flex justify-content-between align-items-center pl-2 pb-2"
+          >
+            <img src="./icons/note-icon.svg" alt="Manual Icon" />
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value=""
+              [checked]="selectedType === 'manual'"
+            />
+          </div>
+
+          <div>
+            <h6>اختيار يدوي</h6>
+            <p class="text-muted mb-0">
+              قم بإنشاء رسالة طلب سكنك بشكل يدوي ودقيق، اختر كلماتك بعناية.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Step Option 2 -->
+      <div
+        class="card mb-3 selection-card {{
+          selectedType === 'automated' ? 'selected-card' : ''
+        }}"
+        (click)="handleTypeSelection('automated')"
+      >
+        <div class="card-body">
+          <div
+            class="d-flex justify-content-between align-items-center pl-2 pb-2"
+          >
+            <img src="./icons/Ai-icon.svg" alt="Automated Icon" />
+            <input
+              class="form-check-input"
+              type="checkbox"
+              value="automated"
+              [checked]="selectedType === 'automated'"
+            />
+          </div>
+
+          <div>
+            <h6>اختيار عن طريق الذكاء الاصطناعي</h6>
+            <p class="text-muted mb-0">
+              قم بإنشاء رسالة طلب سكنك بشكل يدوي ودقيق، اختر كلماتك بعناية.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- horizontal line -->
+      <div *ngIf="selectedType" class="mb-3">
+        <div class="horizontal-line"></div>
+        <span class="right-section-header">قم بتسمية مشروع اختيار</span>
+        <br />
+        <span class="left-section-sub-header mt-2"
+          >أسم مشروعك يجب ان يكون مميز وواضح</span
+        >
+        <input
+          type="text"
+          class="form-control mt-2"
+          placeholder="اسم المشروع مقترح"
+        />
+      </div>
+    </div>
+
+    <!-- Start Button -->
+
+    <div class="d-flex justify-content-end">
+      <button
+        class="btn btn-primary start-button"
+        [disabled]="!selectedType"
+        (click)="handleProceed()"
+      >
+        ابدأ الآن
+      </button>
+    </div>
+  </div>
+</div>

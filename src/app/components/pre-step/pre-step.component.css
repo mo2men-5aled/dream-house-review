@@ -1,0 +1,92 @@
+.right-section {
+  background: radial-gradient(
+      circle at top left,
+      rgba(255, 247, 204, 0.6),
+      transparent
+    ),
+    radial-gradient(circle at top right, rgba(204, 231, 255, 0.6), transparent),
+    radial-gradient(
+      circle at bottom left,
+      rgba(204, 231, 255, 0.6),
+      transparent
+    ),
+    radial-gradient(circle at bottom right, rgba(255, 247, 2040.6), transparent);
+  border-radius: 0 0.6rem 0.6rem 0;
+  padding: 3rem;
+}
+
+.right-section-header {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #183b56;
+}
+
+.announcements-text {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: #83899f;
+}
+
+.left-section {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  height: 41rem;
+  padding: 3rem;
+  background-color: white;
+  border-radius: 0.6rem 0 0 0.6rem;
+}
+
+.left-section-header {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #183b56;
+}
+
+.selection-card {
+  cursor: pointer;
+}
+
+.horizontal-line {
+  width: 100%;
+  border: 0.4px solid #dcdee2;
+  margin: 1.5rem 0;
+}
+
+.left-section-header {
+  padding-top: 1.5rem;
+}
+.left-section-sub-header {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #83899f;
+  margin-bottom: 1rem;
+}
+
+.form-check-input {
+  border-radius: 100%;
+}
+
+.form-check-input:not(:checked) {
+  background-color: #f1f1f1;
+  border: none;
+}
+
+.start-button {
+  width: 12.5rem;
+  cursor: pointer;
+  background-color: #3e97ff;
+}
+
+.start-button:hover {
+  background-color: #0077ff;
+}
+
+.start-button:disabled {
+  background-color: #b0bbd5;
+  border: none;
+}
+
+.selected-card {
+  border-color: #4f9ffd;
+}
